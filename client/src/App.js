@@ -1,9 +1,9 @@
-import { Buttons } from "./components/Button";
+import { MainButtons } from "./components/Button";
 
 function App() {
   return (
     <>
-      <Buttons></Buttons>
+      <MainButtons></MainButtons>
     </>
   );
 }

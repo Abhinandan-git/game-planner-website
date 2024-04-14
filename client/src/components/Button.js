@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+// import MaterialCardsWrapper from './MaterialCardsWrapper';
+	import CharacterCardsWrapper from './CharacterCardsWrapper';
 import './css/Button.css';
 
 const Button = ({ onClick, id, children }) => {
@@ -11,18 +13,40 @@ const Button = ({ onClick, id, children }) => {
 	);
 }
 
-const Buttons = () => {
+const MainButtons = () => {
+	const [characterVisibility, setCharacterVisibility] = useState(false);
+	const [inventoryVisibility, setInventoryVisibility] = useState(false);
+
+	const characterToggle = () => {
+		setCharacterVisibility(!characterVisibility);
+	};
+
+	const materialToggle = () => {
+		setInventoryVisibility(!inventoryVisibility);
+	}
+
 	return (
 		<>
 			<div className="header-bar">
 				<div className='header-menu-bar'>
-					<Button id='chr-add'>Add Character</Button>
-					<Button id='inv-mng'>Manage Inventory</Button>
+					<Button onClick={characterToggle} id='chr-add'>Add Character</Button>
+					<Button onClick={materialToggle} id='inv-mng'>Manage Inventory</Button>
 				</div>
 			</div>
+			{characterVisibility && (
+				<div className='character-block-wrapper character-block-invis' id='character-block-wrapper'>
+					<CharacterCardsWrapper toggleFunction={characterToggle}></CharacterCardsWrapper>
+				</div>
+			)}
+			{inventoryVisibility && (
+				<div className='inventory-block-wrapper' id='inventory-block-wrapper'>
+					{/* <MaterialCardsWrapper toggleFunction={materialToggle}></MaterialCardsWrapper> */}
+					Materials
+				</div>
+			)}
 		</>
 	);
 };
 
-export { Buttons };
+export { MainButtons };
 export default Button;
