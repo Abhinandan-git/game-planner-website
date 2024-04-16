@@ -12,7 +12,9 @@
 	--transparent-white-chocolate: rgba(236, 230, 217, 0.7);
 }
 
-* { box-sizing: border-box; }
+* {
+	box-sizing: border-box;
+}
 
 body, #root {
 	margin: 0;
@@ -26,11 +28,13 @@ body, #root {
 	background-repeat: no-repeat;
 	font-family: 'Poppins', sans-serif;
 	background-image: linear-gradient(to bottom right, #31394e, #1d212d, #191e33, #141829, #101321);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-button { all: unset; }
+button {
+	all: unset;
+}
 
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, button, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
 	margin: 0;
@@ -48,4 +52,24 @@ input {
 
 .noscroll {
 	overflow-y: hidden;
+}
+
+.rarity-1 {
+	background: linear-gradient(160deg, rgba(79, 88, 100, 0.565) 0%, rgba(95, 102, 115, 0.565) 39%, rgba(135, 147, 156, 0.565) 100%);
+}
+
+.rarity-2 {
+	background: linear-gradient(160deg, rgba(72, 87, 92, 0.565) 0%, rgba(72, 107, 103, 0.565) 39%, rgba(98, 152, 113, 0.565) 100%);
+}
+
+.rarity-3 {
+	background: linear-gradient(160deg, rgba(81, 84, 116, 0.565) 0%, rgba(80, 104, 135, 0.565) 39%, rgba(75, 160, 180, 0.565) 100%);
+}
+
+.rarity-4 {
+	background: linear-gradient(160deg, rgba(89, 84, 130, 0.565) 0%, rgba(120, 102, 157, 0.565) 39%, rgba(183, 133, 201, 0.565) 100%);
+}
+
+.rarity-5 {
+	background: linear-gradient(160deg, rgba(105, 84, 83, 0.565) 0%, rgba(161, 112, 78, 0.565) 39%, rgba(228, 171, 82, 0.565) 100%);
 }

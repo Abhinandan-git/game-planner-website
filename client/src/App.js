@@ -1,9 +1,9 @@
-import { MainButtons } from "./components/Button";
+import Home from "./components/Home";
 
 function App() {
   return (
     <>
-      <MainButtons></MainButtons>
+      <Home></Home>
     </>
   );
 }

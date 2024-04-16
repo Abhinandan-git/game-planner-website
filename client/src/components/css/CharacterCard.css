@@ -28,14 +28,6 @@
 	box-shadow: 0 0 5px 0 var(--transparent-black);
 }
 
-.rarity-4 {
-	background: linear-gradient(160deg, rgba(89, 84, 130, 0.565) 0%, rgba(120, 102, 157, 0.565) 39%, rgba(183, 133, 201, 0.565) 100%);
-}
-
-.rarity-5 {
-	background: linear-gradient(160deg, rgba(105, 84, 83, 0.565) 0%, rgba(161, 112, 78, 0.565) 39%, rgba(228, 171, 82, 0.565) 100%);
-}
-
 .character-image {
 	width: 106px;
 	height: 106px;
