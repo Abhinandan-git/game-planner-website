@@ -1,7 +1,7 @@
 import React from 'react';
 import MaterialCard from './MaterialCard';
 import Button from './Button';
-import './css/MaterialCardsWrapper.css';
+import './css/CardsWrapper.css';
 
 function MaterialCardsWrapper({ toggleFunction }) {
 	return (
@@ -17,7 +17,7 @@ function MaterialCardsWrapper({ toggleFunction }) {
 									name="Something"
 									defaultValue={0}
 									rarity={5}
-									imageName="DeadLeyLineLeaves.png"
+									imageName="normal_drops/DeadLeyLineLeaves.png"
 								></MaterialCard>
 						</div>
 					</div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button';
 import CharacterCard from './CharacterCard';
-import './css/CharactersCardsWrapper.css';
+import './css/CardsWrapper.css';
 
 const CharacterCardsWrapper = ({ toggleFunction }) => {
 	return (
