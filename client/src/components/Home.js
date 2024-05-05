@@ -27,9 +27,7 @@ const Home = () => {
 				<CharacterCardsWrapper toggleFunction={characterToggle}></CharacterCardsWrapper>
 			)}
 			{inventoryVisibility && (
-				<div className='inventory-block-wrapper' id='inventory-block-wrapper'>
-					<MaterialCardsWrapper toggleFunction={materialToggle}></MaterialCardsWrapper>
-				</div>
+				<MaterialCardsWrapper toggleFunction={materialToggle}></MaterialCardsWrapper>
 			)}
 		</>
 	);
