@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from './Button';
-// import MaterialCardsWrapper from './MaterialCardsWrapper';
+import MaterialCardsWrapper from './MaterialCardsWrapper';
 import CharacterCardsWrapper from './CharacterCardsWrapper';
 
 const Home = () => {
@@ -27,10 +27,7 @@ const Home = () => {
 				<CharacterCardsWrapper toggleFunction={characterToggle}></CharacterCardsWrapper>
 			)}
 			{inventoryVisibility && (
-				<div className='inventory-block-wrapper' id='inventory-block-wrapper'>
-					{/* <MaterialCardsWrapper toggleFunction={materialToggle}></MaterialCardsWrapper> */}
-					Materials
-				</div>
+				<MaterialCardsWrapper toggleFunction={materialToggle}></MaterialCardsWrapper>
 			)}
 		</>
 	);

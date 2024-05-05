@@ -1,19 +1,19 @@
 import React from 'react';
 import Button from './Button';
 import CharacterCard from './CharacterCard';
-import './css/CharactersCardsWrapper.css';
+import './css/CardsWrapper.css';
 
 const CharacterCardsWrapper = ({ toggleFunction }) => {
 	return (
 		<>
-			<div className='character-block-wrapper' id='character-block-wrapper'>
-				<div className='character-block-body'>
+			<div className='block-wrapper' id='character-block-wrapper'>
+				<div className='block-body'>
 					<div className='save-button-wrapper'>
 						<Button onClick={toggleFunction} id='char-save'>Cancel</Button>
 					</div>
-					<div className='character-block-flex-body'>
-						<div className='character-block-flex-scroll'>
-							<div className='character-block-flex-wrapper'>
+					<div className='block-flex-body'>
+						<div className='block-flex-scroll'>
+							<div className='block-flex-wrapper'>
 								<CharacterCard
 									name="Amber"
 									rarity={4}
