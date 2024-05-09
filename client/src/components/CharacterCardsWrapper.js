@@ -17,7 +17,6 @@ const CharacterCardsWrapper = ({ toggleFunction }) => {
 								<CharacterCard
 									name="Amber"
 									rarity={4}
-									imageName="Amber.png"
 									element="Pyro"
 								></CharacterCard>
 							</div>

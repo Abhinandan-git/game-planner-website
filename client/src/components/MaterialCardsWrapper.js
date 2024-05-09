@@ -1,6 +1,6 @@
 import React from 'react';
-import MaterialCard from './MaterialCard';
 import Button from './Button';
+import MaterialCard from './MaterialCard';
 import './css/CardsWrapper.css';
 
 function MaterialCardsWrapper({ toggleFunction }) {
