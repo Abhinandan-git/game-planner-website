@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "@types/node": "^20.12.10"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
   }
 }
