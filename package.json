@@ -4,5 +4,17 @@
   },
   "dependencies": {
     "concurrently": "^8.2.2"
-  }
+  },
+  "name": "game-planner-website",
+  "version": "1.0.0",
+  "description": "Game Planning App using MERN stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:server": "nodemon server/server.js",
+		"start:client": "cd client && npm start",
+		"start": "concurrently \"npm run start:server\" \"npm run start:client\""
+  },
+  "author": "",
+  "license": "ISC"
 }

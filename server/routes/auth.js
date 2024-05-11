@@ -1,10 +1,10 @@
 const { body, validationResult } = require('express-validator');
+const fetchUser = require('../middleware/fetchUser');
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const router = express.Router();
-const fetchUser = require('../middleware/fetchUser');
 
 const JWT_SECRET = 'abc';
 
