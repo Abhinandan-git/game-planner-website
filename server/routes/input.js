@@ -30,14 +30,18 @@ router.post('/addmaterials', fetchUser, [
 });
 
 router.put('/updatematerials/:id', fetchUser, async (req, res) => {
-	const { materials } = req.body;
-	const newMaterials = {};
-	if (materials) { newMaterials.materials = materials; }
-	let material = await Input.findById(req.params.id);
-	if (!material) { return res.status(404).send("Not Found"); }
-	if (material.username.toString() !== req.user.id) { return res.status(401).send("Not Alowed"); }
-	material = await Input.findByIdAndUpdate(req.params.id, { $set: newMaterials }, { new: true });
-	res.json({ material });
+	try {
+		const { materials } = req.body;
+		const newMaterials = {};
+		if (materials) { newMaterials.materials = materials; }
+		let material = await Input.findById(req.params.id);
+		if (!material) { return res.status(404).send("Not Found"); }
+		if (material.username.toString() !== req.user.id) { return res.status(401).send("Not Alowed"); }
+		material = await Input.findByIdAndUpdate(req.params.id, { $set: newMaterials }, { new: true });
+		res.json({ material });
+	} catch (error) {
+		res.status(500).send("Internal Server Error");
+	}
 });
 
 
