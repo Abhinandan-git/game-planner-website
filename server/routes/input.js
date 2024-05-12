@@ -5,8 +5,12 @@ const express = require('express');
 const router = express.Router();
 
 router.post('/getmaterials', fetchUser, async (req, res) => {
-	const materials = await Input.find({ username: req.user.id });
-	res.json(materials);
+	try {
+		const materials = await Input.find({ username: req.user.id });
+		res.json(materials);
+	} catch (error) {
+		res.status(500).send("Internal Server Error");
+	}
 });
 
 // Add materials Endpoint
@@ -43,6 +47,5 @@ router.put('/updatematerials/:id', fetchUser, async (req, res) => {
 		res.status(500).send("Internal Server Error");
 	}
 });
-
 
 module.exports = router;

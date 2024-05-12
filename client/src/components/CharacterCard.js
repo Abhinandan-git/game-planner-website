@@ -4,7 +4,7 @@ import CHARACTERS from './assets/characters/character';
 import ELEMENTS from './assets/ascension_materials/common/elements/elements';
 
 const CharacterCard = ({ name, rarity, element }) => {
-	const onClickHandler = (name) => {};
+	const onClickHandler = (name) => { };
 
 	return (
 		<div className='character-card-wrapper' id={name} onClick={() => { onClickHandler(name) }}>

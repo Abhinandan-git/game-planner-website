@@ -9,10 +9,20 @@ const Home = () => {
 
 	const characterToggle = () => {
 		setCharacterVisibility(!characterVisibility);
+		if (!characterVisibility) {
+			document.getElementById('root').classList.add('noscroll');
+		} else {
+			document.getElementById('root').classList.remove('noscroll');
+		}
 	};
 
 	const materialToggle = () => {
 		setInventoryVisibility(!inventoryVisibility);
+		if (!inventoryVisibility) {
+			document.getElementById('root').classList.add('noscroll');
+		} else {
+			document.getElementById('root').classList.remove('noscroll');
+		}
 	}
 
 	return (

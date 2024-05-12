@@ -52,20 +52,20 @@ router.post('/login', [
 	const { email, password } = req.body;
 	try {
 		let user = await User.findOne({ email });
-			if (!user) {
-				return res.status(400).json({ errors: "Login with correct credentials" });
+		if (!user) {
+			return res.status(400).json({ errors: "Login with correct credentials" });
+		}
+		const passwordCompare = await bcrypt.compare(password, user.password);
+		if (!passwordCompare) {
+			return res.status(400).json({ errors: "Login with correct credentials" });
+		}
+		const payload = {
+			user: {
+				id: user.id
 			}
-			const passwordCompare = await bcrypt.compare(password, user.password);
-			if (!passwordCompare) {
-				return res.status(400).json({ errors: "Login with correct credentials" });
-			}
-			const payload = {
-				user: {
-					id: user.id
-				}
-			}
-			const authToken = jwt.sign(payload, JWT_SECRET);
-			res.json({ authToken });
+		}
+		const authToken = jwt.sign(payload, JWT_SECRET);
+		res.json({ authToken });
 	} catch (error) {
 		res.status(500).send("Internal Server Error");
 	}
@@ -75,7 +75,7 @@ router.post('/login', [
 router.post('/getuser', fetchUser, async (req, res) => {
 	try {
 		let userId = req.user.id;
-		const user = await User.findById(userId).select("-password");	
+		const user = await User.findById(userId).select("-password");
 		res.send(user);
 	} catch (error) {
 		res.status(500).send("Internal Server Error");
