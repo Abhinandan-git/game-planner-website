@@ -87,3 +87,7 @@ input {
 	color: var(--grey);
 	font-size: 1.25rem;
 }
+
+.inventory-block-invis, .character-block-invis {
+	display: none !important;
+}

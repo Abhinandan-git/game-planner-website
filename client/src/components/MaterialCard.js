@@ -41,7 +41,7 @@ const MaterialCard = ({ name, defaultValue, rarity, imageName }) => {
 				<div className='div-transition'>
 					<div className={'rarity-' + rarity + ' material-image-wrapper'}>
 						<div className='material-image'>
-							<div className='contained-image' style={{ backgroundImage: `url(${require(`./assets/ascension_materials/${imageName}`)})` }} />
+							<div className='contained-image' style={{ backgroundImage: `url(${require(`./assets/${imageName}`)})` }} />
 						</div>
 					</div>
 				</div>

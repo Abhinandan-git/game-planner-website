@@ -3,8 +3,10 @@ import './css/CharacterCard.css';
 import CHARACTERS from './assets/characters/character';
 import ELEMENTS from './assets/ascension_materials/common/elements/elements';
 
-const CharacterCard = ({ name, rarity, element }) => {
-	const onClickHandler = (name) => { };
+const CharacterCard = ({ name, rarity, element, clickHandler }) => {
+	const onClickHandler = (name) => {
+		clickHandler();
+	};
 
 	return (
 		<div className='character-card-wrapper' id={name} onClick={() => { onClickHandler(name) }}>
@@ -13,7 +15,7 @@ const CharacterCard = ({ name, rarity, element }) => {
 					<div className='character-wrapper'>
 						<div className={`rarity-${rarity} character-image-wrapper`}>
 							<div className='character-image'>
-								<div className='contained-image' style={{ backgroundImage: `url(${CHARACTERS[name]})` }}></div>
+								<div className='contained-image' style={{ backgroundImage: `url(${CHARACTERS[name.replace(/\s+/g, '')]})` }}></div>
 								<div className='element-overlay'>
 									<div className='contained-image' style={{ backgroundImage: `url(${ELEMENTS[element]})` }}></div>
 								</div>

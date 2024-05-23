@@ -3,7 +3,7 @@ const Material = require('../models/MaterialInfo');
 const express = require('express');
 const router = express.Router();
 
-router.get('/getcharacterinfo', async (req, res) => {
+router.post('/getcharacterinfo', async (req, res) => {
 	try {
 		const characters = await Character.find();
 		res.json(characters);
@@ -12,7 +12,7 @@ router.get('/getcharacterinfo', async (req, res) => {
 	}
 });
 
-router.get('/getmaterialinfo', async (req, res) => {
+router.post('/getmaterialinfo', async (req, res) => {
 	try {
 		const material = await Material.find();
 		res.json(material);
